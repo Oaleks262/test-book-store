@@ -29,4 +29,17 @@ document.addEventListener('DOMContentLoaded', function() {
       listItem.textContent = `${key}: ${value}`;
       characteristicsList.appendChild(listItem);
     }
+    // функція кнопки "читати більше"
+    const readMoreBtn = document.querySelector('.read-more-btn');
+    const description = document.querySelector('.description');
+  
+    readMoreBtn.addEventListener('click', function() {
+      if (description.style.height === '50px') {
+        description.style.height = description.scrollHeight + 'px';
+        readMoreBtn.textContent = 'Згорнути';
+      } else {
+        description.style.height = '50px';
+        readMoreBtn.textContent = 'Розгорнути';
+      }
+    });
 });
