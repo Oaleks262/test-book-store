@@ -1,11 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Інформація про книгу</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header>
+        <h1>Тестовий сайт Звірич О.</h1>
+      </header>
+      <main class="container">
+        <h1 class="book-title"></h1>
+        <div class="book-content">
+          <img class="book-cover" alt="Обкладинка книги">
+          <div class="book-about">
+            <ul class="characteristics">
+
+            </ul>
+            <a class="author-link" target="_blank"></a>
+            </div>
+        </div>
+        <div class="book-description">
+          <p class="description"></p>
+          <button class="read-more-btn">Розгорнути</button>
+        </div>
+        <div class="comments">
+          <h2>Коментарі:</h2>
+          <ul class="comment-list">
+         
+          </ul>
+          <hr>
+          <form id="comment-form">
+            <input type="text" id="name" placeholder="Ваше ім'я" required>
+            <textarea id="comment" placeholder="Ваш коментар" required></textarea>
+            <button type="submit">Додати коментар</button>
+          </form>
+        </div>
+      </main>
+      <footer>
+        <p>&copy; 2024 Тестовий сайт Звірич О. Усі права захищено.</p>
+      </footer>
+  <script src="index.js"></script>
 </body>
 </html>
