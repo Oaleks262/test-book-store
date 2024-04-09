@@ -1,15 +1,169 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header, footer {
+  background-color: #92a8d3;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+.book-title{
+  margin-left: 25px;
+}
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.book-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 25px;
+}
+
+.book-content .book-cover {
+  width: 200px;
+  height: auto;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+
+.book-content .book-cover:hover {
+  transform: scale(1.05);
+}
+
+.characteristics {
+  list-style: none;
+  padding: 0;
+}
+
+.author-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.book-description {
+  margin: 20px 25px;
+}
+
+.description {
+  margin-bottom: 20px;
+  height: 50px;
+  overflow: hidden;
+  transition-property: height;
+  transition-delay: 0.1s;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out; 
+}
+
+
+
+.read-more-btn {
+  padding: 8px 16px;
+  border: none;
+  background-color: #979fa8;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.comments {
+  margin: 30px 25px;
+}
+
+.comment-list {
+  list-style: none;
+  padding: 0;
+}
+
+.comment-list li {
+  margin-bottom: 10px;
+}
+
+#comment-form {
+  margin-top: 20px;
+}
+
+#comment-form input,
+#comment-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+#comment-form button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#comment-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Правила для планшета (768px - 1279px) */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .container {
+    max-width: 90%;
   }
-  
-  header, footer {
-    background-color: #92a8d3;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
+}
+
+/* Правила для десктопа (від 1280px) */
+@media (min-width: 1280px) {
+  .container {
+    display: flex;
+    max-width: 1440px;
+    flex-direction: column;
+    align-items: center;
   }
- 
+  .book-title{
+      display: flex;
+      width: 100%;
+      justify-content: center;
+  }
+  .book-content{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+  }
+  .book-about{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+  }
+  .book-description {
+      width: 60%;
+    }
+    .comments {
+      width: 60%;
+    }
+    .comment-list{
+      padding-left: 10px;
+    }
+    .comment-list li{
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+    }
+    .characteristics{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+}
