@@ -34,7 +34,7 @@ header, footer {
   width: 200px;
   height: auto;
   border-radius: 4px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease-in-out;
 }
 
 .book-content .book-cover:hover {

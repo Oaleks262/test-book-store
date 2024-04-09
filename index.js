@@ -42,4 +42,41 @@ document.addEventListener('DOMContentLoaded', function() {
         readMoreBtn.textContent = 'Розгорнути';
       }
     });
+     // коментарі
+    const commentList = document.querySelector('.comment-list');
+    const comments = [
+      { author: 'Іван', text: 'Дуже цікава книга!' },
+      { author: 'Марія', text: 'Чудовий опис, зацікавився читати!' },
+      { author: 'Петро', text: 'Рекомендую всім для прочитання.' },
+      { author: 'Олена', text: 'Дуже глибока та актуальна тема.' }
+    ];
+
+    comments.forEach(comment => {
+      const listItem = document.createElement('li');
+      listItem.innerHTML = `<strong>${comment.author}:</strong> ${comment.text}`;
+      commentList.appendChild(listItem);
+    });
+    //функція для додавання коментарів
+    const commentForm = document.getElementById('comment-form');
+    commentForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const nameInput = document.getElementById('name');
+      const commentInput = document.getElementById('comment');
+  
+      const name = nameInput.value;
+      const comment = commentInput.value;
+  
+      if (name && comment) {
+        const commentList = document.querySelector('.comment-list');
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `<strong>${name}:</strong> ${comment}`;
+        commentList.appendChild(listItem);
+  
+        // очищєння поля вводу
+        nameInput.value = '';
+        commentInput.value = '';
+      } else {
+        alert('Будь ласка, заповніть всі поля');
+      }
+    });
 });
