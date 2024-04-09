@@ -57,7 +57,7 @@ header, footer {
 
 .description {
   margin-bottom: 20px;
-  height: 50px;
+  height: 56px;
   overflow: hidden;
   transition-property: height;
   transition-delay: 0.1s;

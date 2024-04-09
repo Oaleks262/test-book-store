@@ -34,11 +34,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const description = document.querySelector('.description');
   
     readMoreBtn.addEventListener('click', function() {
-      if (description.style.height === '50px') {
+      if (description.style.height === '56px') {
         description.style.height = description.scrollHeight + 'px';
         readMoreBtn.textContent = 'Згорнути';
       } else {
-        description.style.height = '50px';
+        description.style.height = '56px';
         readMoreBtn.textContent = 'Розгорнути';
       }
     });
